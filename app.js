@@ -16,7 +16,17 @@ function agregarAmigo() {
     renderizarAmigos();
 }
 //console.log(amigo);
+function renderizarAmigos() {
+    let listaDeAmigos = document.getElementById("listaAmigos");
+    listaDeAmigos.innerHTML = "";
 
+    for (let i = 0; i < amigo.length; i++) {
+    let item = document.createElement("li");
+    item.textContent = amigo[i];
+    listaDeAmigos.appendChild(item);
+    }
+}
+//console.log(amigo);
 
 
 
