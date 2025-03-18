@@ -1,24 +1,21 @@
 // Inicia declarando una variable de tipo array, que almacenará los nombres de los amigos ingresados. 
-
-let nombreAmigo = [];
-console.log(nombreAmigo);
-
+let amigo = [];
 //console.log(amigo);
 
 function agregarAmigo() {
     let inputAmigo = document.getElementById("amigo");
-    let nombreAmigo = inputAmigo.value;
+    let nombreDelAmigo = inputAmigo.value;
     
-    //console.log(nombreAmigo);
-    
-    if (!nombreAmigo) {
-        alert(Por favor, inserte un nombre.);
+    if (!nombreDelAmigo) {
+        alert("Por favor, ¡inserta el nombre de un amigo!");
         return;
-     }
-     amigo.push(nombreAmigo);
-     console.log(amigo)
-     }
- 
+    }
+    amigo.push(nombreDelAmigo);  
+    inputAmigo.value = "";
+    inputAmigo.focus();
+    renderizarAmigos();
+}
+//console.log(amigo);
 
 
 
